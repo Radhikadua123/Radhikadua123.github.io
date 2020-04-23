@@ -74,6 +74,11 @@ a:hover {
   text-decoration: none;
 }
 
+highlight {
+  color: red;
+  text-decoration: none;
+}
+
 body,
 td,
 th,
