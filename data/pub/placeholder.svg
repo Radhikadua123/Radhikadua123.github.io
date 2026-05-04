@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" role="img" aria-label="Teaser placeholder">
+  <rect width="400" height="260" fill="#f4f4f4" stroke="#d8d8d8" stroke-width="2" rx="6"/>
+  <text x="200" y="108" text-anchor="middle" fill="#777" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="600">Teaser placeholder</text>
+  <text x="200" y="138" text-anchor="middle" fill="#999" font-family="system-ui,-apple-system,sans-serif" font-size="13">Export a figure from the paper PDF</text>
+  <text x="200" y="168" text-anchor="middle" fill="#aaa" font-family="system-ui,-apple-system,sans-serif" font-size="12">Save as PNG in data/pub/ (see HTML comment)</text>
+</svg>
