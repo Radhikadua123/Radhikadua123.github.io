@@ -19,6 +19,82 @@
   <link rel="icon" type="image/png" href="images/seal_icon.png">
 
   <style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding-left: 168px;
+    box-sizing: border-box;
+  }
+  .page-nav-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 156px;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 24px 12px 24px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.35;
+    background: #faf9f7;
+    border-right: 1px solid #e6e4e0;
+  }
+  .page-nav-fixed a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid #c8c8c8;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .page-nav-fixed a:hover,
+  .page-nav-fixed a:focus {
+    border-color: #1772d0;
+    color: #1772d0;
+    text-decoration: none;
+  }
+  .page-nav-fixed a.active {
+    background: #1772d0;
+    border-color: #1772d0;
+    color: #fff !important;
+  }
+  .page-nav-fixed a.active:hover,
+  .page-nav-fixed a.active:focus {
+    color: #fff !important;
+    border-color: #135ea8;
+    background: #135ea8;
+  }
+  @media (max-width: 720px) {
+    body { padding-left: 0; }
+    .page-nav-fixed {
+      position: static;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 14px 14px 14px;
+      border-right: none;
+      border-bottom: 1px solid #e6e4e0;
+    }
+    .page-nav-fixed a {
+      display: inline-block;
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 7px 12px;
+    }
+  }
+  #publications, #teaching, #awards, #about { scroll-margin-top: 0.5rem; }
   ::-webkit-scrollbar {
     width: 8px; /* Width of the entire scrollbar */
   }
@@ -62,20 +138,36 @@
   tr.pub-row td.pub-body { vertical-align: top; }
   tr.pub-row .venue { display: block; font-style: italic; margin: 0.2em 0 0 0; color: #444; font-size: 14px; line-height: 1.35; }
   tr.pub-row papertitle { font-size: 18px; }
+  .name-aliases {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    margin: 0.2em 0 0.55em 0;
+    line-height: 1.45;
+    text-align: center;
+  }
 </style>
 </head>
 
 <body>
+  <nav class="page-nav-fixed" aria-label="Page sections">
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#awards">Awards &amp; fellowships</a>
+  </nav>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
+            <td id="about" style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center;margin-bottom:0">
                 <name>Radhika Dua</name>
               </p>
-              <p>I'm a Ph.D. student at the <a href="https://cds.nyu.edu/">Center for Data Science</a>, <a href="https://www.nyu.edu/">New York University</a>, where I am very fortunate to be advised by <a href="https://med.nyu.edu/faculty/eric-oermann">Prof.&nbsp;Eric Oermann</a> and <a href="https://kyunghyuncho.me/">Prof.&nbsp;Kyunghyun Cho</a>. My research focuses on reliable and clinically grounded medical AI, spanning three threads: interpretable evaluation of medical generative models, uncertainty quantification for safe decision-making, and cross-modal learning to extend access to advanced imaging.</p>
+              <p class="name-aliases">(राधिका दुआ / 라디카 두아)</p>
+              <p>Hello, I'm a Ph.D. student at the <a href="https://cds.nyu.edu/">Center for Data Science</a>, <a href="https://www.nyu.edu/">New York University</a>, where I am very fortunate to be advised by <a href="https://med.nyu.edu/faculty/eric-oermann">Prof.&nbsp;Eric Oermann</a> and <a href="https://kyunghyuncho.me/">Prof.&nbsp;Kyunghyun Cho</a>. My research focuses on reliable and clinically grounded medical AI, spanning three threads: interpretable evaluation of medical generative models, uncertainty quantification for safe decision-making, and cross-modal learning to extend access to advanced imaging.</p>
               <p>Before NYU, I was a Predoctoral Researcher at <a href="https://www.deepmind.com/">Google DeepMind</a> / <a href="https://research.google/">Google Research</a>, where I had the opportunity to work with <a href="https://in.linkedin.com/in/gauagg">Dr.&nbsp;Gaurav Aggarwal</a>, <a href="https://www.linkedin.com/in/alok-talekar-5b5a961">Alok Talekar</a>, <a href="https://openreview.net/profile?id=%7EIshan_Deshpande1">Ishan Deshpande</a>, and <a href="https://scholar.google.com/citations?user=Iq8BQUYAAAAJ">Dr.&nbsp;Sujoy Paul</a> on <a href="https://arxiv.org/abs/2411.05359">Agricultural Landscape Understanding</a> and related segmentation problems, including a country-scale system now serving 11&nbsp;countries across the Global South (<a href="https://agri.withgoogle.com/">agri.withgoogle.com</a>). I earned my M.S. from the <a href="https://gsai.kaist.ac.kr/">KAIST Graduate School of AI</a> under <a href="https://mp2893.com/">Prof.&nbsp;Edward Choi</a>, where I worked on <a href="https://arxiv.org/abs/2207.13083">making models robust to distribution shifts</a>. Earlier, I was a summer intern at <a href="https://www.brown.edu/">Brown&nbsp;University</a> with <a href="https://cs.brown.edu/people/ssrinath/">Prof.&nbsp;Srinath&nbsp;Sridhar</a>, and a visiting researcher at <a href="https://iith.ac.in/">IIT&nbsp;Hyderabad</a> with <a href="https://iith.ac.in/~vineethnb/">Prof.&nbsp;Vineeth&nbsp;N.&nbsp;Balasubramanian</a>.</p>
               <p style="text-align:center">
                 <a href="mailto:radhikadua@nyu.edu">Email</a> &nbsp/&nbsp
@@ -95,7 +187,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                       <tr>
-                      <td style="padding:20px;width:100%;vertical-align:middle">
+                      <td id="publications" style="padding:20px;width:100%;vertical-align:middle">
                         <heading>Publications</heading>
                       </td>
                     </tr>
@@ -116,6 +208,8 @@
                         <span class="venue">NeurIPS 2025 WiML Workshop</span>
                         <br>
                         <a href="https://arxiv.org/abs/2508.02808">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2508.02808">bibtex</a>
                         </td>
                      </tr>
                     <tr class="pub-row">
@@ -125,6 +219,8 @@
                         <span class="venue">Under review, Nature Medicine</span>
                         <br>
                         <a href="https://arxiv.org/abs/2511.13703">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2511.13703">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -135,6 +231,8 @@
                         <span class="venue">NeurIPS 2025 Workshop on Tackling Climate Change with Machine Learning (<a href="https://climatechange.ai/papers/neurips2025/35">Climate Change AI</a>)</span>
                         <br>
                         <a href="https://arxiv.org/abs/2411.05359">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2411.05359">bibtex</a>
                         </td>
                      </tr>
                     <tr class="pub-row">
@@ -145,6 +243,8 @@
                         <span class="venue">ECCV 2022 workshop (short paper)</span>
                         <br>
                         <a href="https://arxiv.org/pdf/2207.13083.pdf">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2207.13083">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -154,6 +254,8 @@
                         <span class="venue">CHIL, 2023</span>
                         <br>
                         <a href="https://arxiv.org/pdf/2207.03075.pdf">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2207.03075">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -169,6 +271,8 @@
                         <a href="https://www.youtube.com/watch?v=JKDiCvVPoSw">video</a>
                         /
                         <a href="https://github.com/brown-ivl/ConDor">code</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2201.07788">bibtex</a>
                       </td>
                     </tr>
                     <tr class="pub-row">
@@ -178,6 +282,8 @@
                         <span class="venue">COLING, 2022</span>
                         <br>
                         <a href="https://arxiv.org/pdf/2208.13376.pdf">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2208.13376">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -187,6 +293,8 @@
                         <span class="venue">International Workshop on Pattern Recognition in Healthcare Analytics, ICPR 2022</span>
                         <br>
                         <a href="https://arxiv.org/pdf/2208.08853.pdf">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2208.08853">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -196,6 +304,8 @@
                         <span class="venue">Under review</span>
                         <br>
                         <a href="https://arxiv.org/pdf/2110.09276.pdf">paper</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2110.09276">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -211,6 +321,8 @@
                         <a href="data/MULA_11_CVPR21_ViQAR_video.mp4">video</a>
                         /
                         <a href="data/MULA_11_CVPR21_ViQAR_poster.pdf">poster</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/2010.12852">bibtex</a>
                         </td>
                       </tr>
                     <tr class="pub-row">
@@ -222,6 +334,8 @@
                         <a href="https://ieeexplore.ieee.org/document/8969343">paper</a>
                         /
                         <a href="https://github.com/divyam3897/VayuAnukulani">code</a>
+                        /
+                        <a href="https://arxiv.org/bibtex/1904.03977">bibtex</a>
                         </td>
                       </tr>
                       </tbody>
@@ -229,7 +343,7 @@
 
                   <table class="teaching-section" cellpadding="0" border="0" width="100%" align="center" style="border-collapse:collapse;"><tbody>
                     <tr>
-                      <td class="teaching-heading-cell" style="width:100%;">
+                      <td id="teaching" class="teaching-heading-cell" style="width:100%;">
                         <heading>Teaching</heading>
                       </td>
                     </tr>
@@ -260,7 +374,7 @@
 
                   <table class="teaching-section" cellpadding="0" border="0" width="100%" align="center" style="border-collapse:collapse;"><tbody>
                     <tr>
-                      <td class="teaching-heading-cell" style="width:100%;">
+                      <td id="awards" class="teaching-heading-cell" style="width:100%;">
                         <heading>Awards and Fellowships</heading>
                       </td>
                     </tr>
@@ -287,5 +401,35 @@
         </tr>
       </tbody>
     </table>
+<script>
+(function () {
+  var ids = ['about', 'publications', 'teaching', 'awards'];
+  var nav = document.querySelector('.page-nav-fixed');
+  if (!nav) return;
+  var links = nav.querySelectorAll('a[href^="#"]');
+
+  function sectionTop(id) {
+    var el = document.getElementById(id);
+    return el ? el.getBoundingClientRect().top + window.scrollY : 0;
+  }
+
+  function updateActive() {
+    var y = window.scrollY + 100;
+    var current = '';
+    ids.forEach(function (id) {
+      if (sectionTop(id) <= y) current = id;
+    });
+    links.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('hashchange', updateActive);
+  window.addEventListener('DOMContentLoaded', updateActive);
+  window.addEventListener('load', updateActive);
+  if (document.readyState !== 'loading') updateActive();
+})();
+</script>
 </body>
 </html>
