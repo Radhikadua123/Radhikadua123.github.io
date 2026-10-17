@@ -141,38 +141,44 @@
     line-height: 1.4;
     font-weight: normal;
   }
-  /* Talks: peer section labels (Research / Outreach) vs indented project groups */
+  /* Talks: flush section titles; shared indent + left rule for bodies */
   .teaching-block .talks-section-label {
-    margin: 0 0 0.55em 0;
-    font-size: 1.08em;
+    margin: 0 0 0.5em 0;
+    font-size: 1.1em;
+    padding-left: 0;
+  }
+  .teaching-block .talks-research,
+  .teaching-block .talks-outreach {
+    margin-left: 0;
+    padding-left: 0;
   }
   .teaching-block .talks-research {
-    margin: 0 0 0.25em 0;
+    margin-bottom: 0.25em;
   }
-  .teaching-block .talks-research-body {
-    margin-left: 0.5em;
-    padding-left: 0.9em;
-    border-left: 3px solid #d0d0d0;
+  /* Shared indent for everything under a section title */
+  .teaching-block .talks-research-body,
+  .teaching-block .talks-outreach-body {
+    margin: 0.15em 0 0 1.15em;
+    padding-left: 0.85em;
+    border-left: 3px solid #cfcfcf;
   }
   .teaching-block .talk-project {
-    margin: 1em 0 0.45em 0;
+    margin: 1em 0 0.4em 0;
     font-size: 1.02em;
   }
   .teaching-block .talks-research-body .talk-project:first-child {
-    margin-top: 0.35em;
+    margin-top: 0.25em;
   }
   .teaching-block .talks-outreach {
-    margin-top: 2.6em;
-    padding-top: 1.5em;
-    padding-left: 1.4em;
-    border-top: 1px solid #b0b0b0;
-    border-left: 3px solid #9a9a9a;
+    margin-top: 2.5em;
+    padding-top: 1.4em;
+    border-top: 1px solid #b5b5b5;
   }
   .teaching-block .talks-outreach .talks-section-label {
-    margin-bottom: 0.65em;
+    margin-bottom: 0.5em;
   }
-  .teaching-block .talks-outreach ul.teaching-courses {
-    margin-left: 0.15em;
+  .teaching-block .talks-outreach-body ul.teaching-courses {
+    margin-top: 0.25em;
   }
   tr.pub-row td { vertical-align: top; border-top: 1px solid #eaeaea; }
   table.skim-section-body tbody tr:not(.pub-row) td {
@@ -442,11 +448,13 @@
 
                       <div class="talks-outreach">
                         <p class="school talks-section-label"><strong>Outreach</strong></p>
+                        <div class="talks-outreach-body">
                         <ul class="teaching-courses">
                           <li>Medical AI research overview — NYU CDS PhD Admissions Information Session (Lightning Talk), October 2026</li>
                           <li>Open source and STEM for junior students — Software Freedom Day, Panjab University, 2017</li>
                           <li>Programming sessions for junior-year students — CodeChef Campus Chapter UIET, 2016–2017</li>
                         </ul>
+                        </div>
                       </div>
                         </td>
                       </tr>
