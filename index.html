@@ -126,6 +126,26 @@
     line-height: 1.6;
   }
   .teaching-block ul.teaching-courses li { margin: 0.45em 0; }
+  .teaching-block .talk-entry {
+    margin: 0.85em 0 0 0;
+    font-size: 1.05em;
+    line-height: 1.45;
+  }
+  .teaching-block .talk-entry:first-of-type { margin-top: 0.35em; }
+  .teaching-block .talk-entry .venue {
+    display: block;
+    font-style: italic;
+    margin: 0.15em 0 0 0;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: normal;
+  }
+  .teaching-block .talks-group {
+    margin: 1.35em 0 0.35em 0;
+    font-size: 1.05em;
+  }
+  .teaching-block .talks-group:first-child { margin-top: 0; }
   tr.pub-row td { vertical-align: top; border-top: 1px solid #eaeaea; }
   table.skim-section-body tbody tr:not(.pub-row) td {
     padding: 16px 20px 8px 2.75rem;
@@ -366,33 +386,52 @@
                     </tr>
                     <tr>
                       <td class="teaching-body-cell teaching-block" style="width:100%;">
-                      <p class="school"><strong>Research Talks</strong></p>
-                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>More Information, Less Uncertainty? Monotonic Uncertainty Regularization Under Progressive Information</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Samsung Research (Internal Research Talk), June 2026</li>
-                      </ul>
-                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Clinically Grounded Agent-based Report Evaluation: An Interpretable Metric for Radiology Report Generation</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Global AI Frontiers Lab (GAIFL) Workshop, South Korea (Lightning Talk), July 2026</li>
-                        <li>Global AI Frontiers Lab, October 2025</li>
-                        <li>AI Mixers, NYU Langone Health (Lightning Talk), 2025</li>
-                      </ul>
-                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Agricultural Landscape Understanding at Scale</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Google Research Week (Lightning Talk), 2024</li>
-                        <li>American Geophysical Union (AGU) Fall Meeting (Oral Talk), 2023</li>
-                        <li>Google Booth, AGU Fall Meeting, 2023</li>
-                      </ul>
-                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning</strong></p>
-                      <ul class="teaching-courses">
-                        <li>IISc Open Day (Keynote Talk), 2023</li>
-                      </ul>
-                      <p class="school"><strong>Outreach and Student Sessions</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Research Lightning Talk, NYU Center for Data Science PhD Admissions Information Session, October 2026</li>
-                        <li>CodeChef Campus Chapter UIET, Speaker, 2016–2017</li>
-                        <li>Software Freedom Day, Panjab University, Speaker, 2017</li>
-                      </ul>
+                      <p class="talks-group"><strong>Invited / research talks</strong></p>
+                      <p class="talk-entry">
+                        <strong>Lightning talk: GAIFL Workshop, South Korea</strong><br>
+                        <span class="venue">ICARE · July 2026</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Samsung Research — Internal Research Talk</strong><br>
+                        <span class="venue">Monotonic Uncertainty Regularization (MUR) · June 2026</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Talk: Global AI Frontiers Lab</strong><br>
+                        <span class="venue">ICARE · October 2025</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Lightning talk: AI Mixers, NYU Langone Health</strong><br>
+                        <span class="venue">ICARE · 2025</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Lightning talk: Google Research Week</strong><br>
+                        <span class="venue">Agricultural Landscape Understanding at Scale · 2024</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Oral talk: AGU Fall Meeting</strong><br>
+                        <span class="venue">Agricultural Landscape Understanding at Scale · 2023</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Google Booth, AGU Fall Meeting</strong><br>
+                        <span class="venue">Agricultural Landscape Understanding at Scale · 2023</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Keynote: IISc Open Day</strong><br>
+                        <span class="venue">Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning · 2023</span>
+                      </p>
+                      <p class="talks-group"><strong>Outreach</strong></p>
+                      <p class="talk-entry">
+                        <strong>Research lightning talk: NYU CDS PhD Admissions Information Session</strong><br>
+                        <span class="venue">October 2026</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Speaker: Software Freedom Day, Panjab University</strong><br>
+                        <span class="venue">2017</span>
+                      </p>
+                      <p class="talk-entry">
+                        <strong>Speaker: CodeChef Campus Chapter UIET</strong><br>
+                        <span class="venue">2016–2017</span>
+                      </p>
                         </td>
                       </tr>
                       </tbody></table>
