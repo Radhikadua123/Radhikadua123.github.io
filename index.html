@@ -94,7 +94,7 @@
       padding: 7px 12px;
     }
   }
-  #publications, #teaching, #awards, #about { scroll-margin-top: 0.5rem; }
+  #publications, #talks, #teaching, #awards, #about { scroll-margin-top: 0.5rem; }
   ::-webkit-scrollbar {
     width: 8px; /* Width of the entire scrollbar */
   }
@@ -154,6 +154,7 @@
   <nav class="page-nav-fixed" aria-label="Page sections">
     <a href="#about">About</a>
     <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
     <a href="#teaching">Teaching</a>
     <a href="#awards">Awards &amp; fellowships</a>
   </nav>
@@ -359,6 +360,45 @@
 
                   <table class="teaching-section" cellpadding="0" border="0" width="100%" align="center" style="border-collapse:collapse;"><tbody>
                     <tr>
+                      <td id="talks" class="teaching-heading-cell" style="width:100%;">
+                        <heading>Talks</heading>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="teaching-body-cell teaching-block" style="width:100%;">
+                      <p class="school"><strong>Research Talks</strong></p>
+                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>More Information, Less Uncertainty? Monotonic Uncertainty Regularization Under Progressive Information</strong></p>
+                      <ul class="teaching-courses">
+                        <li>Samsung Research (Internal Research Talk), June 2026</li>
+                      </ul>
+                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Clinically Grounded Agent-based Report Evaluation: An Interpretable Metric for Radiology Report Generation</strong></p>
+                      <ul class="teaching-courses">
+                        <li>Global AI Frontiers Lab (GAIFL) Workshop, South Korea (Lightning Talk), July 2026</li>
+                        <li>Global AI Frontiers Lab, October 2025</li>
+                        <li>AI Mixers, NYU Langone Health (Lightning Talk), 2025</li>
+                      </ul>
+                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Agricultural Landscape Understanding at Scale</strong></p>
+                      <ul class="teaching-courses">
+                        <li>Google Research Week (Lightning Talk), 2024</li>
+                        <li>American Geophysical Union (AGU) Fall Meeting (Oral Talk), 2023</li>
+                        <li>Google Booth, AGU Fall Meeting, 2023</li>
+                      </ul>
+                      <p class="school" style="font-weight:normal;margin-top:0.85em;"><strong>Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning</strong></p>
+                      <ul class="teaching-courses">
+                        <li>IISc Open Day (Keynote Talk), 2023</li>
+                      </ul>
+                      <p class="school"><strong>Outreach and Student Sessions</strong></p>
+                      <ul class="teaching-courses">
+                        <li>Research Lightning Talk, NYU Center for Data Science PhD Admissions Information Session, October 2026</li>
+                        <li>CodeChef Campus Chapter UIET, Speaker, 2016–2017</li>
+                        <li>Software Freedom Day, Panjab University, Speaker, 2017</li>
+                      </ul>
+                        </td>
+                      </tr>
+                      </tbody></table>
+
+                  <table class="teaching-section" cellpadding="0" border="0" width="100%" align="center" style="border-collapse:collapse;"><tbody>
+                    <tr>
                       <td id="teaching" class="teaching-heading-cell" style="width:100%;">
                         <heading>Teaching</heading>
                       </td>
@@ -419,7 +459,7 @@
     </table>
 <script>
 (function () {
-  var ids = ['about', 'publications', 'teaching', 'awards'];
+  var ids = ['about', 'publications', 'talks', 'teaching', 'awards'];
   var nav = document.querySelector('.page-nav-fixed');
   if (!nav) return;
   var links = nav.querySelectorAll('a[href^="#"]');
