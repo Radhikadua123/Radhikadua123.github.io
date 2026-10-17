@@ -141,11 +141,36 @@
     line-height: 1.4;
     font-weight: normal;
   }
-  /* Subheads reuse Teaching's .school; Outreach gets a clear section break */
-  .teaching-block .talks-group-outreach {
-    margin-top: 2.1em;
-    padding-top: 1.15em;
-    border-top: 1px solid #d8d8d8;
+  /* Talks: peer section labels (Research / Outreach) vs indented project groups */
+  .teaching-block .talks-section-label {
+    margin: 0 0 0.55em 0;
+    font-size: 1.08em;
+  }
+  .teaching-block .talks-research {
+    margin: 0 0 0.25em 0;
+  }
+  .teaching-block .talks-research-body {
+    margin-left: 0.85em;
+    padding-left: 0.35em;
+  }
+  .teaching-block .talk-project {
+    margin: 1em 0 0.45em 0;
+    font-size: 1.02em;
+  }
+  .teaching-block .talks-research-body .talk-project:first-child {
+    margin-top: 0.35em;
+  }
+  .teaching-block .talks-outreach {
+    margin-top: 2.35em;
+    padding-top: 1.35em;
+    padding-left: 1.35em;
+    border-top: 1px solid #c8c8c8;
+  }
+  .teaching-block .talks-outreach .talks-section-label {
+    margin-bottom: 0.65em;
+  }
+  .teaching-block .talks-outreach ul.teaching-courses {
+    margin-left: 0.15em;
   }
   tr.pub-row td { vertical-align: top; border-top: 1px solid #eaeaea; }
   table.skim-section-body tbody tr:not(.pub-row) td {
@@ -387,34 +412,40 @@
                     </tr>
                     <tr>
                       <td class="teaching-body-cell teaching-block" style="width:100%;">
-                      <p class="school"><strong>Invited talks</strong></p>
-                      <p class="school" style="margin-top:0.85em;"><strong>ICARE: Clinically Grounded Agent-based Report Evaluation</strong></p>
-                      <ul class="teaching-courses">
-                        <li>GAIFL Workshop, South Korea (Lightning Talk), July 2026</li>
-                        <li>Global AI Frontiers Lab, October 2025</li>
-                        <li>AI Mixers, NYU Langone Health (Lightning Talk), 2025</li>
-                      </ul>
-                      <p class="school" style="margin-top:0.85em;"><strong>Monotonic Uncertainty Regularization (MUR)</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Samsung Research (Internal Research Talk), June 2026</li>
-                      </ul>
-                      <p class="school" style="margin-top:0.85em;"><strong>Agricultural Landscape Understanding at Scale</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Google Research Week (Lightning Talk), 2024</li>
-                        <li>AGU Fall Meeting (Oral), 2023</li>
-                        <li>Google Booth, AGU Fall Meeting, 2023</li>
-                      </ul>
-                      <p class="school" style="margin-top:0.85em;"><strong>Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning</strong></p>
-                      <ul class="teaching-courses">
-                        <li>IISc Open Day (Keynote), 2023</li>
-                      </ul>
+                      <div class="talks-research">
+                        <p class="school talks-section-label"><strong>Research talks and presentations</strong></p>
+                        <div class="talks-research-body">
+                          <p class="school talk-project"><strong>ICARE: Clinically Grounded Agent-based Report Evaluation</strong></p>
+                          <ul class="teaching-courses">
+                            <li>GAIFL Workshop, South Korea (Lightning Talk), July 2026</li>
+                            <li>Global AI Frontiers Lab, October 2025</li>
+                            <li>AI Mixers, NYU Langone Health (Lightning Talk), 2025</li>
+                          </ul>
+                          <p class="school talk-project"><strong>Monotonic Uncertainty Regularization (MUR)</strong></p>
+                          <ul class="teaching-courses">
+                            <li>Samsung Research (Internal Research Talk), June 2026</li>
+                          </ul>
+                          <p class="school talk-project"><strong>Agricultural Landscape Understanding at Scale</strong></p>
+                          <ul class="teaching-courses">
+                            <li>Google Research Week (Lightning Talk), 2024</li>
+                            <li>AGU Fall Meeting (Oral), 2023</li>
+                            <li>Google Booth, AGU Fall Meeting, 2023</li>
+                          </ul>
+                          <p class="school talk-project"><strong>Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning</strong></p>
+                          <ul class="teaching-courses">
+                            <li>IISc Open Day (Keynote), 2023</li>
+                          </ul>
+                        </div>
+                      </div>
 
-                      <p class="school talks-group-outreach"><strong>Outreach</strong></p>
-                      <ul class="teaching-courses">
-                        <li>Medical AI research overview — NYU CDS PhD Admissions Information Session (Lightning Talk), October 2026</li>
-                        <li>Open source and STEM for junior students — Software Freedom Day, Panjab University, 2017</li>
-                        <li>Programming sessions for junior-year students — CodeChef Campus Chapter UIET, 2016–2017</li>
-                      </ul>
+                      <div class="talks-outreach">
+                        <p class="school talks-section-label"><strong>Outreach</strong></p>
+                        <ul class="teaching-courses">
+                          <li>Medical AI research overview — NYU CDS PhD Admissions Information Session (Lightning Talk), October 2026</li>
+                          <li>Open source and STEM for junior students — Software Freedom Day, Panjab University, 2017</li>
+                          <li>Programming sessions for junior-year students — CodeChef Campus Chapter UIET, 2016–2017</li>
+                        </ul>
+                      </div>
                         </td>
                       </tr>
                       </tbody></table>
