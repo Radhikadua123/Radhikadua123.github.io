@@ -127,25 +127,26 @@
   }
   .teaching-block ul.teaching-courses li { margin: 0.45em 0; }
   .teaching-block .talk-entry {
-    margin: 0.85em 0 0 0;
+    margin: 1.15em 0 0 0;
     font-size: 1.05em;
-    line-height: 1.45;
+    line-height: 1.5;
   }
-  .teaching-block .talk-entry:first-of-type { margin-top: 0.35em; }
+  .teaching-block .school + .talk-entry { margin-top: 0.45em; }
   .teaching-block .talk-entry .venue {
     display: block;
     font-style: italic;
-    margin: 0.15em 0 0 0;
-    color: #444;
+    margin: 0.2em 0 0 0;
+    color: #555;
     font-size: 14px;
-    line-height: 1.35;
+    line-height: 1.4;
     font-weight: normal;
   }
-  .teaching-block .talks-group {
-    margin: 1.35em 0 0.35em 0;
-    font-size: 1.05em;
+  /* Subheads reuse Teaching's .school; Outreach gets a clear section break */
+  .teaching-block .talks-group-outreach {
+    margin-top: 2.1em;
+    padding-top: 1.15em;
+    border-top: 1px solid #d8d8d8;
   }
-  .teaching-block .talks-group:first-child { margin-top: 0; }
   tr.pub-row td { vertical-align: top; border-top: 1px solid #eaeaea; }
   table.skim-section-body tbody tr:not(.pub-row) td {
     padding: 16px 20px 8px 2.75rem;
@@ -386,7 +387,7 @@
                     </tr>
                     <tr>
                       <td class="teaching-body-cell teaching-block" style="width:100%;">
-                      <p class="talks-group"><strong>Invited / research talks</strong></p>
+                      <p class="school"><strong>Invited talks</strong></p>
                       <p class="talk-entry">
                         <strong>Lightning talk: GAIFL Workshop, South Korea</strong><br>
                         <span class="venue">ICARE · July 2026</span>
@@ -419,7 +420,8 @@
                         <strong>Keynote: IISc Open Day</strong><br>
                         <span class="venue">Towards Sustainable Agriculture Prioritizing the Global South Using Machine Learning · 2023</span>
                       </p>
-                      <p class="talks-group"><strong>Outreach</strong></p>
+
+                      <p class="school talks-group-outreach"><strong>Outreach</strong></p>
                       <p class="talk-entry">
                         <strong>Research lightning talk: NYU CDS PhD Admissions Information Session</strong><br>
                         <span class="venue">October 2026</span>
